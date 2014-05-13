@@ -25,7 +25,7 @@ endif
 all: $(BUILD_PREFIX)/lib/python2.7/site-packages/polyhedron/__init__.py
 
 $(BUILD_PREFIX)/lib/python2.7/site-packages/polyhedron/__init__.py: Makefile
-	cd polyhedron-0.2.1; python setup.py install --prefix=$(BUILD_PREFIX) --record $(shell pwd)/python_install_manifest.txt
+	python setup.py install --prefix=$(BUILD_PREFIX) --record $(shell pwd)/python_install_manifest.txt
 
 clean:
 	cat python_install_manifest.txt | xargs rm -rf
